@@ -222,4 +222,4 @@ FastAPI automatically generates interactive API documentation based on the OpenA
 
 ## Assignment Notes
 
-This project is the BE-02: Containerize stack assignment. It builds upon the earlier BE-01 assignment by replacing the in-memory Python list with a **SQLite database** for persistent storage.
+This project is the BE-02. It builds upon the earlier BE-01 [assignment](https://github.com/ajazhussainsiddiqui1/build_crud_api) by replacing the in-memory Python list with a **SQLite database** for persistent storage.
