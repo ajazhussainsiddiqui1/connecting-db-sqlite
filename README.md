@@ -218,7 +218,7 @@ FastAPI automatically generates interactive API documentation based on the OpenA
 
 **Screenshot of database viewer** 
  
-![Screenshot of database viewer](assets/screenshot_view_ss.png)
+![Screenshot of database viewer](assets/screenshot_view_db.png)
 
 ## Assignment Notes
 
