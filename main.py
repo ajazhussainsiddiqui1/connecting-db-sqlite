@@ -129,16 +129,6 @@ def get_stats():
 
 
 
-# @app.post("/reset")
-# def reset_tasks():
-#     global tasks
-#     tasks = [
-#         {"id": 1, "title": "server set up", "done": True},
-#         {"id": 2, "title": "Build the endpoints", "done": True},
-#         {"id": 3, "title": "Test API with FastAPI's Swagger UI", "done": False}
-#     ]
-#     return {"message": "Tasks have been reset"}
-
 
 if __name__ == "__main__":
     
