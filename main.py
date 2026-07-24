@@ -6,11 +6,25 @@ from contextlib import asynccontextmanager
 from crud import create_task, get_all_tasks, get_task_by_id, update_task, delete_task
 from database import engine, Base
 
+#  Seed data: default tasks inserted only if table is empty 
+DEFAULT_TASKS = [
+    {"title": "server set up", "done": True},
+    {"title": "Build the endpoints", "done": True},
+    {"title": "Test API with FastAPI's Swagger UI", "done": False},
+]
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(engine)
     print("Tasks table verified/created successfully!") 
+    existing = get_all_tasks()
+    if not existing:
+        for task in DEFAULT_TASKS:
+            create_task(title=task['title'], done=task['done'])
+        print(f"Seeded {len(DEFAULT_TASKS)} default tasks.")
+    else:
+        print(f"Table already has {len(existing)} tasks..... skipping seed.")        
+
     yield
 
 
